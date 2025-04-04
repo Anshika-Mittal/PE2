@@ -1,5 +1,5 @@
 import Address from "@/components/shopping-view/address";
-import img from "../../assets/account.jpg";
+import accImg from "../../assets/banner-1.jpeg";
 import { useDispatch, useSelector } from "react-redux";
 import UserCartItemsContent from "@/components/shopping-view/cart-items-content";
 import { Button } from "@/components/ui/button";
@@ -97,9 +97,12 @@ function ShoppingCheckout() {
 
   return (
     <div className="flex flex-col">
-      <div className="relative h-[300px] w-full overflow-hidden">
-        <img src={img} className="h-full w-full object-cover object-center" />
-      </div>
+      <img
+                src={accImg}
+                className="h-full w-full object-cover object-top"
+              />
+
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5 p-5">
         <Address
           selectedId={currentSelectedAddress}

@@ -150,9 +150,9 @@ function ShoppingListing() {
       <ProductFilter filters={filters} handleFilter={handleFilter} />
       <div className="bg-background w-full rounded-lg shadow-sm">
         <div className="p-4 border-b flex items-center justify-between">
-          <h2 className="text-lg font-extrabold">All Products</h2>
+          <h2 className="text-3xl font-extrabold">All Products</h2>
           <div className="flex items-center gap-3">
-            <span className="text-muted-foreground">
+            <span className="text-muted-foreground text-[1.5rem]">
               {productList?.length} Products
             </span>
             <DropdownMenu>
@@ -162,8 +162,8 @@ function ShoppingListing() {
                   size="sm"
                   className="flex items-center gap-1"
                 >
-                  <ArrowUpDownIcon className="h-4 w-4" />
-                  <span>Sort by</span>
+                  <ArrowUpDownIcon className="h-5 w-5 " />
+                  <span className="text-[1rem]">Sort by</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-[200px]">

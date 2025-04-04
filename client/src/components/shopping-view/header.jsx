@@ -1,4 +1,4 @@
-import { HousePlug, LogOut, Menu, ShoppingCart, UserCog } from "lucide-react";
+import {  LogOut, Menu, ShoppingCart, UserCog } from "lucide-react";
 import {
   Link,
   useLocation,
@@ -56,7 +56,7 @@ function MenuItems() {
       {shoppingViewHeaderMenuItems.map((menuItem) => (
         <Label
           onClick={() => handleNavigate(menuItem)}
-          className="text-sm font-medium cursor-pointer"
+          className="text-xl tracking-tighter font-normal cursor-pointer"
           key={menuItem.id}
         >
           {menuItem.label}
@@ -79,6 +79,7 @@ function HeaderRightContent() {
 
   useEffect(() => {
     dispatch(fetchCartItems(user?.id));
+    
   }, [dispatch]);
 
   console.log(cartItems, "sangam");
@@ -138,13 +139,13 @@ function ShoppingHeader() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <header className="sticky top-0 z-40 w-full border-b bg-gradient-to-br from-teal-200 to-indigo-200 ">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/shop/home" className="flex items-center gap-2">
         <img src={logo} alt="" className="h-6 w-6" />
 
           {/* <HousePlug className="h-6 w-6" /> */}
-          <span className="font-bold">Equip-E-Mart</span>
+          <span className="font-bold text-xl tracking-tighter">Equip-E-Mart</span>
         </Link>
         <Sheet>
           <SheetTrigger asChild>

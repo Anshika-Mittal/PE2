@@ -28,8 +28,10 @@ function AuthLayout() {
           </p>
         </div>
       </div>
-      <div className="flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
+      <div className="flex flex-1 items-center text-xl justify-center bg-gray-50 px-4 py-12 sm:px-6 lg:px-8 relative">
+        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-br hover:from-teal-500 hover:to-indigo-500">
         <Outlet />
+      </div>
       </div>
     </div>
   );

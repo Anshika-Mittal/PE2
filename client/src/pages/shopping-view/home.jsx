@@ -4,19 +4,8 @@ import bannerTwo from "../../assets/banner-2.jpeg";
 import bannerThree from "../../assets/banner-3.jpeg";
 import bannerFour from "../../assets/banner-4.jpeg";
 import {
-  Airplay,
-  BabyIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-  CloudLightning,
-  Heater,
-  Images,
-  Shirt,
-  ShirtIcon,
-  ShoppingBasket,
-  UmbrellaIcon,
-  WashingMachine,
-  WatchIcon,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
@@ -40,11 +29,11 @@ import { Stethoscope, Accessibility, HeartPulse,Activity,Monitor,Microscope, Shi
 
 
 const categoriesWithIcon = [
-  { id: "home-healthcare", label: "Home Healthcare", icon: Stethoscope },
-  { id: "rehabilitation", label: "Rehabilitation & Mobility", icon: Accessibility },
+  { id: "homehealth", label: "Home Healthcare", icon: Stethoscope },
+  { id: "mobility", label: "Rehabilitation & Mobility", icon: Accessibility },
   { id: "ppe", label: "PPE & Hygiene", icon: ShieldCheck },
   { id: "diagnostic", label: "Diagnostic Devices", icon: Thermometer },
-  { id: "patient-care", label: "Patient Care", icon: Bed },
+  { id: "patient", label: "Patient Care", icon: Bed },
 ];
 
 const brandsWithIcon = [
@@ -85,11 +74,13 @@ function ShoppingHome() {
   }
 
   function handleAddtoCart(getCurrentProductId) {
+    console.log(productDetails?.image);
     dispatch(
       addToCart({
         userId: user?.id,
         productId: getCurrentProductId,
         quantity: 1,
+        image: "hi",
       })
     ).then((data) => {
       if (data?.payload?.success) {
@@ -105,13 +96,6 @@ function ShoppingHome() {
     if (productDetails !== null) setOpenDetailsDialog(true);
   }, [productDetails]);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % featureImageList.length);
-    }, 15000);
-
-    return () => clearInterval(timer);
-  }, [featureImageList]);
 
   useEffect(() => {
     dispatch(
@@ -122,7 +106,7 @@ function ShoppingHome() {
     );
   }, [dispatch]);
 
-  console.log(productList, "productList");
+  // console.log(productList, "productList");
 
   useEffect(() => {
     dispatch(getFeatureImages());
@@ -138,7 +122,7 @@ function ShoppingHome() {
                 key={index}
                 className={`${
                   index === currentSlide ? "opacity-100" : "opacity-0"
-                } absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000`}
+                } absolute top-0 left-0 w-full h-full object-top transition-opacity duration-1000`}
               />
             ))
           : null}
@@ -169,6 +153,7 @@ function ShoppingHome() {
           <ChevronRightIcon className="w-4 h-4" />
         </Button>
       </div>
+      
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">

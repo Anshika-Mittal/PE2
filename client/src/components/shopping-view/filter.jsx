@@ -8,16 +8,16 @@ function ProductFilter({ filters, handleFilter }) {
   return (
     <div className="bg-background rounded-lg shadow-sm">
       <div className="p-4 border-b">
-        <h2 className="text-lg font-extrabold">Filters</h2>
+        <h2 className="text-3xl font-extrabold">Filters</h2>
       </div>
       <div className="p-4 space-y-4">
         {Object.keys(filterOptions).map((keyItem) => (
           <Fragment>
             <div>
-              <h3 className="text-base font-bold">{keyItem}</h3>
-              <div className="grid gap-2 mt-2">
+              <h3 className="text-xl font-bold">{keyItem.toUpperCase()}</h3>
+              <div className="grid gap-2 p-1 mt-2">
                 {filterOptions[keyItem].map((option) => (
-                  <Label className="flex font-medium items-center gap-2 ">
+                  <Label className="flex font-semibold tracking-tighter text-xl items-center gap-2 ">
                     <Checkbox
                       checked={
                         filters &&
@@ -25,7 +25,7 @@ function ProductFilter({ filters, handleFilter }) {
                         filters[keyItem] &&
                         filters[keyItem].indexOf(option.id) > -1
                       }
-                      onCheckedChange={() => handleFilter(keyItem, option.id)}
+                      onCheckedChange={() => handleFilter(keyItem, option.id)} className="mr-2 p-1"
                     />
                     {option.label}
                   </Label>

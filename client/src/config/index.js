@@ -58,11 +58,11 @@ export const addProductFormElements = [
     name: "category",
     componentType: "select",
     options: [
-      { id: "men", label: "Men" },
-      { id: "women", label: "Women" },
-      { id: "kids", label: "Kids" },
-      { id: "accessories", label: "Accessories" },
-      { id: "footwear", label: "Footwear" },
+      { id: "homehealth", label: "Home Healthcare"},
+      { id: "mobility", label: "Rehabilitation & Mobility"},
+      { id: "ppe", label: "PPE & Hygiene"},
+      { id: "diagnostic", label: "Diagnostic Devices" },
+      { id: "patient", label: "Patient Care"},
     ],
   },
   {
@@ -70,12 +70,12 @@ export const addProductFormElements = [
     name: "brand",
     componentType: "select",
     options: [
-      { id: "nike", label: "Nike" },
-      { id: "adidas", label: "Adidas" },
-      { id: "puma", label: "Puma" },
-      { id: "levi", label: "Levi's" },
-      { id: "zara", label: "Zara" },
-      { id: "h&m", label: "H&M" },
+      { id: "philips", label: "Philips Healthcare" },
+  { id: "omron", label: "Omron" },
+  { id: "medtronic", label: "Medtronic" },
+  { id: "gehealthcare", label: "GE Healthcare" },
+  { id: "siemens", label: "Siemens Healthineers" },
+  { id: "bplmedical", label: "BPL Medical" },
     ],
   },
   {
@@ -113,28 +113,28 @@ export const shoppingViewHeaderMenuItems = [
     path: "/shop/listing",
   },
   {
-    id: "men",
-    label: "Men",
+    id: "homehealth",
+    label: "Home Healthcare",
     path: "/shop/listing",
   },
   {
-    id: "women",
-    label: "Women",
+    id: "mobility",
+    label: "Rehabilitation & Mobility",
     path: "/shop/listing",
   },
   {
-    id: "kids",
-    label: "Kids",
+    id: "ppe",
+    label: "PPE",
     path: "/shop/listing",
   },
   {
-    id: "footwear",
-    label: "Footwear",
+    id: "diagnostic",
+    label: "Diagnostic",
     path: "/shop/listing",
   },
   {
-    id: "accessories",
-    label: "Accessories",
+    id: "patient",
+    label: "Patient Care",
     path: "/shop/listing",
   },
   {
@@ -145,37 +145,37 @@ export const shoppingViewHeaderMenuItems = [
 ];
 
 export const categoryOptionsMap = {
-  men: "Men",
-  women: "Women",
-  kids: "Kids",
-  accessories: "Accessories",
-  footwear: "Footwear",
+  homehealth: "Home Healthcare",
+  mobility: "Rehabilitation & Mobility",
+  ppe: "PPE & Hygiene",
+  diagnostic: "Diagnostic Devices",
+  patient: "Patient Care",
 };
 
 export const brandOptionsMap = {
-  nike: "Nike",
-  adidas: "Adidas",
-  puma: "Puma",
-  levi: "Levi",
-  zara: "Zara",
-  "h&m": "H&M",
+  philips: "Philips Healthcare",
+  omron: "Omron",
+  medtronic: "Medtronic",
+  gehealthcare: "GE Healthcare",
+  siemens: "Siemens Healthineers",
+  bplmedical: "BPL Medical"
 };
 
 export const filterOptions = {
   category: [
-    { id: "men", label: "Men" },
-    { id: "women", label: "Women" },
-    { id: "kids", label: "Kids" },
-    { id: "accessories", label: "Accessories" },
-    { id: "footwear", label: "Footwear" },
+    { id: "homehealth", label: "Home Healthcare" },
+    { id: "mobility", label: "Rehabilitation & Mobility" },
+    { id: "ppe", label: "PPE & Hygiene" },
+    { id: "diagnostic", label: "Diagnostic Devices" },
+    { id: "patient", label: "Patient Care" },
   ],
   brand: [
-    { id: "nike", label: "Nike" },
-    { id: "adidas", label: "Adidas" },
-    { id: "puma", label: "Puma" },
-    { id: "levi", label: "Levi's" },
-    { id: "zara", label: "Zara" },
-    { id: "h&m", label: "H&M" },
+    { id: "philips", label: "Philips Healthcare" },
+    { id: "omron", label: "Omron" },
+    { id: "medtronic", label: "Medtronic" },
+    { id: "gehealthcare", label: "GE Healthcare" },
+    { id: "siemens", label: "Siemens Healthineers" },
+    { id: "bplmedical", label: "BPL Medical" },
   ],
 };
 
