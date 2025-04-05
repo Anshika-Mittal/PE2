@@ -17,7 +17,7 @@ import p11 from "../../assets/featured/p11.jpg";
 import p12 from "../../assets/featured/p12.jpg";
 import p13 from "../../assets/featured/p13.jpg";
 import p14 from "../../assets/featured/p14.jpg";
-import p15 from "../../assets/featured/p15.jpg";
+import p15 from "../../assets/featured/p15.jpeg";
 import p16 from "../../assets/featured/p16.jpg";
 import p17 from "../../assets/featured/p17.jpg";
 import p18 from "../../assets/featured/p18.jpg";

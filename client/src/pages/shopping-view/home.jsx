@@ -20,7 +20,7 @@ import { addToCart, fetchCartItems } from "@/store/shop/cart-slice";
 import { useToast } from "@/components/ui/use-toast";
 import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
-
+import Chatbot from './chatbot.jsx';
 
 
 const featureImageList = [bannerOne, bannerTwo, bannerThree, bannerFour];
@@ -114,6 +114,7 @@ function ShoppingHome() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      
       <div className="relative w-full h-[600px] overflow-hidden">
         {featureImageList && featureImageList.length > 0
           ? featureImageList.map((slide, index) => (
@@ -126,6 +127,8 @@ function ShoppingHome() {
               />
             ))
           : null}
+
+<Chatbot />
         <Button
           variant="outline"
           size="icon"
@@ -219,6 +222,7 @@ function ShoppingHome() {
         setOpen={setOpenDetailsDialog}
         productDetails={productDetails}
       />
+      
     </div>
   );
 }

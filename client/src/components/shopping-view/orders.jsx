@@ -42,18 +42,18 @@ function ShoppingOrders() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Order History</CardTitle>
+        <CardTitle className="text-xl">Order History</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>
-          <TableHeader>
-            <TableRow>
+          <TableHeader className="text-xl">
+            <TableRow >
               <TableHead>Order ID</TableHead>
               <TableHead>Order Date</TableHead>
               <TableHead>Order Status</TableHead>
               <TableHead>Order Price</TableHead>
               <TableHead>
-                <span className="sr-only">Details</span>
+                <span className="sr-only text-xl">Details</span>
               </TableHead>
             </TableRow>
           </TableHeader>
@@ -65,7 +65,7 @@ function ShoppingOrders() {
                     <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
                     <TableCell>
                       <Badge
-                        className={`py-1 px-3 ${
+                        className={`py-1 px-3  ${
                           orderItem?.orderStatus === "confirmed"
                             ? "bg-green-500"
                             : orderItem?.orderStatus === "rejected"
@@ -85,7 +85,7 @@ function ShoppingOrders() {
                           dispatch(resetOrderDetails());
                         }}
                       >
-                        <Button
+                        <Button className="text-xl"
                           onClick={() =>
                             handleFetchOrderDetails(orderItem?._id)
                           }

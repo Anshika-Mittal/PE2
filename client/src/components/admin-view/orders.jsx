@@ -41,12 +41,12 @@ function AdminOrdersView() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>All Orders</CardTitle>
+        <CardTitle className="text-xl">All Orders</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
-            <TableRow>
+            <TableRow className="text-xl">
               <TableHead>Order ID</TableHead>
               <TableHead>Order Date</TableHead>
               <TableHead>Order Status</TableHead>
@@ -84,7 +84,7 @@ function AdminOrdersView() {
                           dispatch(resetOrderDetails());
                         }}
                       >
-                        <Button
+                        <Button className="text-xl"
                           onClick={() =>
                             handleFetchOrderDetails(orderItem?._id)
                           }

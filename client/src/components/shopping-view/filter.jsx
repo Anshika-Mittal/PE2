@@ -17,15 +17,15 @@ function ProductFilter({ filters, handleFilter }) {
               <h3 className="text-xl font-bold">{keyItem.toUpperCase()}</h3>
               <div className="grid gap-2 p-1 mt-2">
                 {filterOptions[keyItem].map((option) => (
-                  <Label className="flex font-semibold tracking-tighter text-xl items-center gap-2 ">
-                    <Checkbox
+                  <Label className="flex  tracking-tighter text-xl items-center gap-2 ">
+                    <Checkbox 
                       checked={
                         filters &&
                         Object.keys(filters).length > 0 &&
                         filters[keyItem] &&
-                        filters[keyItem].indexOf(option.id) > -1
+                        filters[keyItem].indexOf(option.id) > -1 
                       }
-                      onCheckedChange={() => handleFilter(keyItem, option.id)} className="mr-2 p-1"
+                      onCheckedChange={() => handleFilter(keyItem, option.id)} className="mr-2 "
                     />
                     {option.label}
                   </Label>

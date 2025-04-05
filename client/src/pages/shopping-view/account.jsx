@@ -16,8 +16,8 @@ function ShoppingAccount() {
         <div className="flex flex-col rounded-lg border bg-background p-6 shadow-sm">
           <Tabs defaultValue="orders">
             <TabsList>
-              <TabsTrigger value="orders">Orders</TabsTrigger>
-              <TabsTrigger value="address">Address</TabsTrigger>
+              <TabsTrigger value="orders" className="text-xl">Orders</TabsTrigger>
+              <TabsTrigger value="address" className="text-xl">Address</TabsTrigger>
             </TabsList>
             <TabsContent value="orders">
               <ShoppingOrders />
