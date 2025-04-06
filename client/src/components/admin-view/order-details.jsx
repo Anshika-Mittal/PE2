@@ -59,7 +59,7 @@ function AdminOrderDetailsView({ orderDetails }) {
         </div>
         <div className="flex items-center justify-between">
           <p className="text-base font-medium text-gray-600">Total Price</p>
-          <Label>${orderDetails?.totalAmount}</Label>
+          <Label>Rs.  {orderDetails?.totalAmount}</Label>
         </div>
         <div className="flex items-center justify-between">
           <p className="text-base font-medium text-gray-600">Payment Method</p>
@@ -95,7 +95,7 @@ function AdminOrderDetailsView({ orderDetails }) {
             <li key={index} className="py-2 flex justify-between text-base w-full">
               <div className="text-gray-700 w-[250px]">📦 {item.title}</div>
               <div className="text-gray-500">Qty: {item.quantity}</div>
-              <div className="text-gray-800 font-semibold">${item.price}</div>
+              <div className="text-gray-800 font-semibold">Rs. {item.price}</div>
             </li>
           ))
         ) : (
